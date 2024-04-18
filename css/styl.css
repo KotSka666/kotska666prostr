@@ -4,6 +4,7 @@
     max-width: 100%;
     overflow: hidden;
     background-color: #fdebeb;
+    
 }
 
 h2 {
@@ -21,14 +22,14 @@ h3 {
 /*----------------------------------------------------------------------------*/
 .header {
     height: 100vh;
-    background: url("../img/Главная\ 2.jpg") 0 0 / 100% 100%  no-repeat;
+    background: url("../img/Главная\ 2.jpg") 0 0 / 100% 100% no-repeat;
 }
 
 .header_top {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    
+
 }
 
 .img_logo {
@@ -43,7 +44,7 @@ h3 {
     margin: 0px 85px 50px 100px;
     justify-content: center;
     position: relative;
-    
+
 }
 
 .header_nav_top_item {
@@ -210,7 +211,7 @@ h3 {
     font-weight: 900;
     font-size: 48px;
     text-align: center;
-    
+
 }
 
 .btm {
@@ -579,7 +580,7 @@ h3 {
     align-items: stretch;
     justify-items: center;
     margin-top: 30px;
-    
+
 }
 
 .btm_calendar_holidays_options {
@@ -983,79 +984,82 @@ h3 {
 /* --------------------------reviews----------------------------------------------- */
 /* -------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------------- */
-
-body {
-    font: 16px Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-a,
-a:visited,
-a:active,
-a:focus {
-    
-    text-decoration: none;
-}
-
-a:hover,
-a:active,
-a:focus {
-    color: #ff6163;
-}
-
-.slider-container {
+.reviews{
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+}
+.carousel {
+    position: relative;
+    width: 1100px;
+    padding: 40px 20px;
+    /* border: 1px solid #CCC; */
+    /* border-radius: 15px; */
+    /* background: #eee; */
+}
+
+.carousel img {
+    width: 550px;
+    height: 650px;
+    /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
+    display: block;
 }
 
 .arrow {
-    font-size: 30px;
-}
-
-.slider {
-    display: flex;
-    width: 100px;
-    overflow: hidden;
-    margin: 0 10px;
-}
-
-.items {
-    width: 100px;
-    height: 100px;
-    /*   display: flex; */
-    position: relative;
-    color: #444;
-    font-size: 30px;
-    margin: 0 auto;
-    border: 1px solid #444;
-    overflow: hidden;
-
-    /*   will-change: right;
-    transition: right .3s; */
-}
-
-.item {
-    width: 100px;
-    height: 100px;
     position: absolute;
-    /*   display: flex;
-    align-items: center;
-    justify-content: center; */
-    background-color: papayawhip;
-    /*   box-sizing: border-box; */
-    /*   border: 1px solid #444; */
-    transition: all ease .6s;
-    left: 0;
-    top: 0;
+    top: 60px;
+    padding: 0;
+    background: #fdebeb;
+    border-radius: 15px;
+    /* border: 1px solid gray; */
+    font-size: 80px;
+    line-height: 620px;
+    color: #444;
+    display: block;
 }
 
-/* .item ~ .item {
-    border-left: none;
+.arrow:focus {
+    outline: none;
 }
-   */
+
+.arrow:hover {
+    /* background: #ccc; */
+    cursor: pointer;
+}
+
+.prev {
+    left: 7px;
+    z-index: 1000;
+}
+
+.next {
+    right: 7px;
+    z-index: 1000;
+}
+
+.gallery {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery ul {
+    height: 650px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+
+
 /* ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------- */
@@ -1067,10 +1071,12 @@ a:focus {
     background-color: #d9c9c952;
     padding: 2% 4% 2% 4%;
 }
+
 .footer_heder {
     display: flex;
     justify-content: space-between;
 }
+
 .footer_navi {
     margin-right: 15%;
 }
@@ -1080,14 +1086,17 @@ a:focus {
     text-align: left;
     margin-bottom: 15px;
 }
-.header_logo_footer{
+
+.header_logo_footer {
     height: 250px;
     width: 250px;
 }
-.navi_item a{
+
+.navi_item a {
     color: #9b9a9a;
-    
+
 }
+
 .navi_item :hover {
     font-weight: 700;
     /* color: #fdebeb; */
@@ -1095,12 +1104,12 @@ a:focus {
     transition: 1.3s;
 }
 
-.img_logo_footer{
+.img_logo_footer {
     display: block;
     height: 100%;
-    
-    
+
+
     justify-content: end;
 }
-.footer_body {
-}
+
+.footer_body {}
